@@ -1,0 +1,49 @@
+## **C default template**
+
+```c
+#include <stdio.h>
+
+int main() {
+   printf("hello world");
+}
+```
+
+---
+
+<aside>
+ SIGINT - ctrl+c คือการส่ง interrupt signal
+
+</aside>
+
+## Input
+
+```c
+gets(str);
+// gets overflow ถ้าเกิด พิมพ์เกินขนาด parameter ไปทับตัวแปรตัวอื่น 
+//not okay เติม terminate char ไว้ตัวสุดท้าย
+
+fgets(str, 10, stdin);
+// stdin คือ source ที่เรารับ input
+// fgets (str, 10, stdin) เก็บได้แค่ 8 ตัว จาก 10
+
+getchar();
+// recieve one character
+
+scanf("%s", &str);
+```
+
+
+## Output
+
+คือการ output จากตัวแรกไปถึง terminate character ตัวสุดท้าย
+
+```c
+printf()
+puts(); //เว้นบรรทัดให้อัตโนมัติ
+putchar('') //output character
+
+```
+
+
+
+
