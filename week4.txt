@@ -1,0 +1,50 @@
+
+# Function
+
+```c
+#include <abcd> //function prototype
+int isEven(int) //function prototype
+int isEven(int a , float b) //function prototype
+{
+    return a
+}
+
+return-value-type function-name(parameter-list) //function header
+{   //function body
+    declarations
+    
+    statement
+    statement
+
+}
+```
+
+ไม่จำเป็นต้องใส่ parameter-list หริอ ใส่ void ก็ได้
+
+declare(การบอกว่ามีสิ่งนี้อยู่) กับ define ต่างกัน
+
+
+
+
+
+#include <stdio.h>
+int x = 10; //life time all program not use if possible lead to many error
+
+// int addTen(int x) {
+//     // x = 30; redeclare value int x = 30; ไม่ได้ เพราะ decalre in parameter แล้ว
+//     x = x + 10;
+//     return x;
+// }
+
+int main() {
+    printf("%d", x);
+}
+// int main() {
+
+//     int x = 20; //only in this scope (different scope can be same name)
+//     printf("%d\n", x);
+//     int y = addTen(x); 
+//     printf("%d", y);
+//     // x = 20; //re-value of a variable
+// }
+
