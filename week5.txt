@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main()
+{
+    // //a decimal b c hexaddecimal d binary
+    // int a = 100, b = 0144, c = 0x64, d= 0b0110101;
+    // printf("%d %d %d %d\n", a, b, c, d);
+    int x = 100;
+    printf("value of x %d\n", x);
+    printf("ref of x %d\n", &x); //&x = ref ของ x
+    printf("ref of x %p\n", &x); // p design to print address (hexadecimal)
+
+    int data[10] = {10, 20, 30, 40, 50}; // array size 10 first 5 value is 10 20 30 40 50 จองไว้ 40 byte
+    // int dataa[] = {10, 20, 30, 40, 50}; // array with size of 10 20 30 40 50
+    // printf("%d",sizeof(dataa));
+    printf("data[0] = %d\n", data[0]);
+    printf("ref of data[0] = %p\n", &data[0]);
+    printf("ref of data = %p\n", data); // is equal to address แรกของ index 0 bc compiler เก็บ แค่ address 0
+
+    printf("data[1] = %p\n", &data[1]);
+    // &data[0] = 0, &data[1] = 4
+
+    printf("data[50] = %d\n", data[50]); // ใช้ pointer access ที่ไม่ควรเข้าถึงได้ โดย data[0] + (4*50) (array is pointer var )
+
+    // ตัวแปร pointer เก็บ address อื่นไว้ที่ตัวมัน เป็นตัวชี้ ตำแหน่งใน memory
+    int *ptr; // เก็บค่าให้ตรง
+    // ptr = &x;
+    // printf("value x = %d, address x /value of ptr = %p, ref of ptr = %p, value x /*ptr = %d\n" , x,ptr,&ptr, *ptr); //dereferencing (*ptr)
+    // *ptr += 10;
+    // printf("value x = %d, address x /value of ptr = %p, ref of ptr = %p, value x /*ptr = %d\n", x, ptr, &ptr, *ptr);
+    // x += 100;
+    // printf("value x = %d, address x /value of ptr = %p, ref of ptr = %p, value x /*ptr = %d\n", x, ptr, &ptr, *ptr);
+
+    // ptr += 1; // + address ไป 4 byte
+    // printf("value x = %d, address x /value of ptr = %p, ref of ptr = %p, value x /*ptr = %d\n", x, ptr, &ptr, *ptr); // 1C+ 4 = 20
+
+    // ptr = data;
+    // for (int i = 0; i<10; i++) {
+    //     printf("data[%d] [%p] = %d\n", i, &data[i], data[i]);
+    // }
+    // // use pointer i = (i*4 byte)
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     printf("data[%d] [%p] = %d\n", i, data + i, *(data+i));
+    // }
+
+    // scanf input using format
+    int a;
+    char s[20];            // ชื่อ array เป็น ref ของ array
+    scanf("%d %s", &a, s); // other data type need & infront
+
+    for (char *cPtr = s; *cPtr != '\0'; cPtr++)
+    { // cPtr ++ บวกทีละ 1 byte เพราะมันเป็น char
+        printf("[%p] = %c\n", cPtr, *cPtr);
+    }
+}
