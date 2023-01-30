@@ -1,5 +1,6 @@
 ## **C default template**
-
+BYE world
+this is an update from user1 from branch main
 ```c
 #include <stdio.h>
 
