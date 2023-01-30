@@ -1,5 +1,6 @@
-## **C default template**
-
+## **C default template**  
+HI WORLD
+Hello this in an edited version from user1
 ```c
 #include <stdio.h>
 
