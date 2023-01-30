@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 ## **C default template**
 BYE world
 this is an update from user1 from branch main
-=======
-## **C default template**  
-
->>>>>>> feature3
 ```c
 #include <stdio.h>
 
